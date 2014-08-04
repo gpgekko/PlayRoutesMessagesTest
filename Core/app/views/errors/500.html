@@ -1,0 +1,43 @@
+#{extends 'Core/main.html' /}
+#{set 'pageTitle'}#{if messages.all() != null}&{'error.500'}#{/if}#{else}Fatal exception#{/else}#{/set}
+
+<style type="text/css">
+	html, body
+	{
+		background: initial !important;
+	}
+	div#container
+	{
+		overflow: auto;
+		height: 100%;
+	}
+	.block
+	{
+		border-bottom: none !important;
+	}
+	#header
+	{
+		background: initial !important;
+	}
+	#source
+	{
+		background: initial !important;
+		margin: 0px 20px !important;
+		border-bottom: 1px solid #AAA !important;
+		border-top: 1px solid #AAA !important;
+	}
+</style>
+
+<div id="container">
+	#{if play?.mode?.name() == 'DEV'}
+		#{500 exception /}
+	#{/if}
+	#{else}
+		<h2>#{if messages.all() != null}&{'error.500.title'}#{/if}#{else}Database error#{/else}</h2>
+		#{if exception instanceof play.exceptions.PlayException}
+			<p>
+				#{if messages.all() != null}&{'error.500.logged', exception.id}#{/if}#{else}This exception has been logged with id ${exception.id}#{/else}
+			</p>
+		#{/if}
+	#{/else}
+</div>

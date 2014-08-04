@@ -1,0 +1,10 @@
+#---------------------------------------------------------------------
+# Project dependencies
+#---------------------------------------------------------------------
+require:
+   - play [1.2.5.3,)
+# Some Modules:
+   - testcase -> Base latest.integration
+
+include:
+   - ${application.path}/../repositories.yml

@@ -1,0 +1,21 @@
+#{extends 'Core/main.html' /}
+#{set 'pageTitle'}&{'error.403'}#{/set}
+
+<style type="text/css">
+	html, body
+	{
+		background: initial !important;
+	}
+	div#container
+	{
+		overflow: auto;
+		height: 100%;
+	}
+</style>
+
+<div id="container">
+	<h2>&{'error.403'}</h2>
+	<p>
+		${result.message}
+	</p>
+</div>

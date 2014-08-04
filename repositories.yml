@@ -1,0 +1,7 @@
+repositories:
+   - localModules:
+      type:       local
+      descriptor: ${application.path}/../[module]/conf/dependencies.yml
+      artifact:   ${application.path}/../[module]
+      contains:
+         - testcase -> *

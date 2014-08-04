@@ -1,0 +1,22 @@
+# -- English messages --
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+
+# Basic information
+version=version %s
+
+# Error messages
+ # General
+error.400=Bad request
+error.400.body=The following errors were found in this request:
+error.401=Unauthorized access!
+error.401.title=Please sign in to continue
+error.403=Forbidden
+error.403.title=This section is not available for you
+error.404=Not found
+error.406=Not acceptable
+error.406.title=%s is only available in %s format!
+error.409=Can't process these changes!
+error.500=Error
+error.500.title=Oops, an error occured
+error.500.logged=This exception has been logged with id <strong>%s</strong>.

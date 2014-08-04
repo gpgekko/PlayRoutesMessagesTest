@@ -1,0 +1,3 @@
+{
+	"message": "${exception?.message?.escapeJavaScript()}"
+}

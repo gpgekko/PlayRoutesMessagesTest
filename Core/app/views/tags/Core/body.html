@@ -1,0 +1,20 @@
+#{if !request.isAjax()}
+
+	#{extends 'Core/main.html' /}
+
+	<nav id="navigation">
+		<div class="logo" title="${play?.configuration?.get('application.name')}, #{if messages.all() != null}&{'version', play?.configuration?.get('application.version')}#{/if}#{else}${play?.configuration?.get('application.version')}#{/else}&#10;
+#{if play?.configuration?.get('test.variation') != null}, ${play?.configuration?.get('test.variation')} distribution#{/if}&#10;
+Deployed on ${new Date(play?.applicationPath?.lastModified()).format('dd-MM-yyyy, kk:mm z')}&#10;"></div>
+		<a class="#{if pageTitle.equals(messages.get('settingsTitle'))}active#{/if}" tabindex="0">
+			<span>&{'settingsTitle'}</span>
+		</a>
+		<a class="#{if pageTitle.equals(messages.get('helpTitle'))}active#{/if}" tabindex="0">
+			<span>&{'helpTitle'}</span>
+		</a>
+	</nav>
+
+#{/if}
+#{else}
+	#{doBody /}
+#{/else}

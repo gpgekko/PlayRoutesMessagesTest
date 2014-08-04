@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			#{get 'pageTitle'/} - ${play?.configuration?.get("application.name")}
+			#{if play?.configuration?.containsKey("test.variation")} (${play?.configuration?.get("test.variation")})#{/if}
+		</title>
+		<meta charset="${_response_encoding}">
+		<meta name="author" content="G. Pot">
+		#{if messages.all() != null}<meta name="description" content="&{'description'}">#{/if}
+		<meta name="application-name" content="${play?.configuration?.get('application.name')}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		#{get 'moreStyles' /}
+		#{get 'moreScripts' /}
+	</head>
+	<body>
+		<section class="container-fluid row-fluid">
+			#{doLayout /}
+		</section>
+	</body>
+</html>

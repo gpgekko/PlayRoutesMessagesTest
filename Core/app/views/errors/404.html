@@ -1,0 +1,41 @@
+#{extends 'Core/main.html' /}
+#{set 'pageTitle'}&{'error.404'}#{/set}
+
+<style type="text/css">
+	html, body
+	{
+		background: initial !important;
+	}
+	div#container
+	{
+		overflow: auto;
+		height: 100%;
+	}
+	.block
+	{
+		border-bottom: none !important;
+	}
+	#header
+	{
+		background: initial !important;
+	}
+	#routes
+	{
+		background: initial !important;
+		margin: 0px 20px !important;
+		border-bottom: 1px solid #AAA !important;
+		border-top: 1px solid #AAA !important;
+	}
+</style>
+
+<div id="container">
+	#{if play.mode.name() == 'DEV'}
+		#{404 result /}
+	#{/if}
+	#{else}
+		<h2>&{'error.404'}</h2>
+		<p>
+			 ${result.message}
+		</p>
+	#{/else}
+</div>

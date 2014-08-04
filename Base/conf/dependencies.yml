@@ -1,0 +1,13 @@
+#---------------------------------------------------------------------
+# Module dependencies
+#---------------------------------------------------------------------
+
+self: testcase -> Base 0.1
+
+require:
+   - play [1.2.5.3,)
+   - testcase -> Core latest.integration:
+      transitive: false
+
+include:
+   - ${application.path}/../repositories.yml

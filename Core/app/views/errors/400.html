@@ -1,0 +1,26 @@
+#{extends 'Core/main.html' /}
+#{set 'pageTitle'}&{'error.400'}#{/set}
+
+<style type="text/css">
+	html, body
+	{
+		background: initial !important;
+	}
+	div#container
+	{
+		overflow: auto;
+		height: 100%;
+	}
+</style>
+
+<div id="container">
+	<h2>&{'error.400'}</h2>
+	<p>
+		&{'error.400.body'}
+		 <ul>
+		#{errors}
+			 <li>${error}: ${error.key}</li>
+		#{/errors}
+		</ul>
+	</p>
+</div>

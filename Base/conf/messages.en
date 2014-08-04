@@ -1,0 +1,7 @@
+# -- English messages --
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+
+# Basic page titles
+settingsTitle=Settings
+helpTitle=Help
