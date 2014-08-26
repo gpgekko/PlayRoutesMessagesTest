@@ -1,0 +1,4 @@
+ApplicationTest/logs/
+ApplicationTest/modules/
+ApplicationTest/server.pid
+ApplicationTest/tmp/
